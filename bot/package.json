@@ -1,0 +1,16 @@
+{
+  "name": "ton-avatar-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Telegram бот для генерации TON аватарок",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "node --watch index.mjs"
+  },
+  "dependencies": {
+    "canvas": "^3.1.0",
+    "dotenv": "^16.5.0",
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
