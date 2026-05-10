@@ -1,12 +1,13 @@
 import { useState, useRef, useCallback } from 'react';
 import { toPng } from 'html-to-image';
 import { Download, RefreshCw, Sparkles, LayoutTemplate, Type, Image as ImageIcon } from 'lucide-react';
+import WebApp from '@twa-dev/sdk';
 import { cn } from './utils/cn';
 import { BACKGROUNDS } from './constants';
 import { TonLogo } from './components/Icons';
 
 export default function App() {
-  const [domain, setDomain] = useState('username');
+  const [domain, setDomain] = useState(WebApp.initDataUnsafe?.user?.username || 'username');
   const [bgIndex, setBgIndex] = useState(0);
   const [isGenerating, setIsGenerating] = useState(false);
   const [glassMode, setGlassMode] = useState(true);
